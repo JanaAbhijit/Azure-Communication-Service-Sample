@@ -31,6 +31,7 @@ namespace AzureComServiceSample
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // Replace the connection String, From and To Number with actual values
             string connectionString = "endpoint=https://acsworkdemo.communication.azure.com/;accesskey=iaguTNg97Tn1G3xxxxxAgyq8wcuJ/0xxxxxxtRuee1e2uw8RrEA2YOAOGcykc8lv5ShimoA==";
             SmsClient acsSmsClient = new SmsClient(connectionString);
             SendSmsResponse acsSmsResult = acsSmsClient.Send(
@@ -42,8 +43,5 @@ namespace AzureComServiceSample
             MessageBox.Show($"Message Sent Successfully. Message ID{acsSmsResult.MessageId}");
       
         }
-
-
-      //  new SendSmsOptions { EnableDeliveryReport = true } // optional
 }
 }
